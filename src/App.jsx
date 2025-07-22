@@ -20,6 +20,11 @@ const App = () => {
   const passwordRef = useRef(null);
 
   // useCallback: Creates a memoized function to generate password
+  // ✅ If you use useCallback:
+  // React will memoize (remember) the function.
+  // It will only re-create the function when its dependencies change.
+  // This avoids unnecessary re-renders or re-executions of useEffect.
+  
   const passwordGenerator = useCallback(() => {
     let password = "";
     let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
