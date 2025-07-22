@@ -17,6 +17,8 @@ const App = () => {
   const [copied, setCopied] = useState("Copy");
 
   // useRef to access the password input field in the DOM
+  // Accessing DOM elements (like document.getElementById)
+  // React doesn’t recommend direct DOM manipulation, but sometimes it's necessary (e.g., focus input, scroll to element).
   const passwordRef = useRef(null);
 
   // useCallback: Creates a memoized function to generate password
